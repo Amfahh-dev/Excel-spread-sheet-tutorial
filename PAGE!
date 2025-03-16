@@ -1,0 +1,33 @@
+Personal Budget Tracker Spreadsheet
+Sheet 1: "Income & Expenses"
+
+Column A: Date
+Column B: Description
+Column C: Category (Income, Food, Utilities, Entertainment, etc.)
+Column D: Amount (Positive for Income, Negative for Expenses)
+Sample entries:
+
+Date	Description	Category	Amount
+2025-03-01	Salary	Income	3000
+2025-03-02	Grocery shopping	Food	-150
+2025-03-03	Netflix	Entertainment	-12
+Sheet 2: "Summary"
+
+A1: "Total Income"
+
+B1: =SUMIF('Income & Expenses'!C:C, "Income", 'Income & Expenses'!D:D)
+
+A2: "Total Expenses"
+
+B2: =SUMIF('Income & Expenses'!C:C, "<>Income", 'Income & Expenses'!D:D)
+
+A3: "Net Savings"
+
+B3: =B1 + B2
+
+Conditional Formatting: Use conditional formatting to highlight positive or negative values. For example, format income to show in green and expenses in red.
+
+Sheet 3: "Charts"
+
+Pie Chart: Create a pie chart showing the distribution of your spending by category.
+Bar Chart: Display your income vs. expenses over time.
